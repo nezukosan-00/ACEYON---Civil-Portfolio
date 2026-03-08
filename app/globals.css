@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arch-bg-primary: #0E0F11;
+  --color-arch-bg-secondary: #1A1C20;
+  --color-arch-border: #2E3238;
+  --color-arch-text-primary: #EAEAEA;
+  --color-arch-text-secondary: #9DA3AE;
+  --color-arch-accent: #4F9C8F;
+  --color-arch-steel: #C7CCD1;
+  --color-arch-concrete: #8A8F96;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-playfair), ui-serif, Georgia;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    
+    --arch-bg-primary: #0E0F11;
+    --arch-bg-secondary: #1A1C20;
+    --arch-border: #2E3238;
+    --arch-text-primary: #EAEAEA;
+    --arch-text-secondary: #9DA3AE;
+    --arch-accent: #4F9C8F;
+    --arch-steel: #C7CCD1;
+    --arch-concrete: #8A8F96;
+  }
+  
+  .dark {
+    --background: var(--arch-bg-primary);
+    --foreground: var(--arch-text-primary);
+  }
+}
+
+@layer utilities {
+  .bg-arch-gradient {
+    background: linear-gradient(135deg, #0E0F11 0%, #1A1C20 100%);
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Hide scrollbar for seamless animation */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--arch-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--arch-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--arch-text-secondary);
+}
